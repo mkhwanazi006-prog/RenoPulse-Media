@@ -127,36 +127,106 @@ section[id] {
     color: #c29438;
 }
 /* ==========================================================================
-   HAMBURGER DRAWER TRANSITION STATES
+   FRESH RESPONSIVE SIDEBAR NAVIGATION STYLES
    ========================================================================== */
 
-/* Base configuration for the slideout drawer (Hidden off-screen left by default) */
+/* Hidden Off-Screen Left configuration by default */
 .slideout-drawer {
     position: fixed;
     top: 0;
-    left: -300px; /* Adjust this width based on your drawer's exact width */
+    left: -320px;
     width: 300px;
     height: 100%;
     background-color: #111111;
     border-right: 1px solid #1a1a1a;
-    z-index: 9999; /* Higher than headers to slide over everything */
-    transition: left 0.4s cubic-bezier(0.25, 1, 0.5, 1); /* Premium fluid motion */
-    box-shadow: 5px 0 25px rgba(0,0,0,0.5);
-    padding: 30px;
+    z-index: 9999;
+    box-shadow: 5px 0 25px rgba(0, 0, 0, 0.6);
+    padding: 40px 30px;
     box-sizing: border-box;
+    transition: left 0.35s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
-/* 💡 Activated state triggered via JavaScript */
+/* 💡 Activated trigger class applied by JavaScript */
 .slideout-drawer.active {
-    left: 0; 
+    left: 0;
 }
 
-/* Make hamburger toggle lines stand out as an interactive element */
-.menu-toggle {
+.close-drawer-btn {
+    background: none;
+    border: none;
+    color: #c29438;
+    font-size: 32px;
     cursor: pointer;
-    display: none; /* Managed by your mobile media queries to appear under 768px */
-    flex-direction: column;
-    gap: 5px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.drawer-title {
+    color: #ffffff;
+    font-size: 18px;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #222222;
+    padding-bottom: 10px;
+}
+
+.drawer-menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.drawer-menu-list li {
+    margin-bottom: 20px;
+}
+
+.drawer-menu-list a {
+    color: #aaaaaa;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.2s;
+    display: block;
+}
+
+.drawer-menu-list a:hover {
+    color: #c29438;
+}
+
+/* ==========================================================================
+   MOBILE VIEWPORT BREAKPOINT CONFIGURATION (Under 768px Width)
+   ========================================================================== */
+@media screen and (max-width: 768px) {
+    /* Hide desktop links */
+    .nav-links {
+        display: none !important;
+    }
+
+    /* 💡 Hide Logo on Mobile Screen layout as requested */
+    .logo-area, .brand-logo-img {
+        display: none !important;
+    }
+
+    /* Render Hamburger Toggle visible */
+    .menu-toggle {
+        display: flex !important;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+    }
+
+    .menu-toggle span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background-color: #ffffff;
+        border-radius: 2px;
+    }
+
+    .header-container {
+        justify-content: flex-start; /* Aligns hamburger content elegantly to the left margin */
+        padding: 0 20px;
+    }
 }
 
 .menu-toggle span {
