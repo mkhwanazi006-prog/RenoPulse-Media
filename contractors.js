@@ -3,18 +3,18 @@
 // ==========================================================================
 const directoryDatabase = [
     {
-       // id: 1,
-       // category: "bathroom",
-        //name: "Elite Bathrooms & Spas", 
-        //title: "Elite Bathrooms & Spas",
-        //tag: "Bathroom Remodeling Expert",
-        //rating: "4.8",
-        //img: "pictures/pexels-curtis-adams-1694007-36777927.jpg",
-        //desc: "Transforming standard home bathrooms into luxury wellness suites. Custom wet-rooms, frameless glass showers, floating vanities, and premium modern tiling layouts.",
-        //phone: "083 999 8888",
-        //location: "Sandton, Gauteng",
-        //initials: "EB",
-        //featured: false
+       id: 1,
+       category: "bathroom",
+       name:"Elite Bathrooms & Spas", 
+       title: "Elite Bathrooms & Spas",
+       tag: "Bathroom Remodeling Expert",
+       rating: "4.8",
+       img: "pexels-curtis-adams-1694007-36777927.jpg",
+       desc: "Transforming standard home bathrooms into luxury wellness suites. Custom wet-rooms, frameless glass showers, floating vanities, and premium modern tiling layouts.",
+       phone: "083 999 8888",
+       location: "Sandton, Gauteng",
+       initials: "EB",
+       featured: false
     },
     
 ];
