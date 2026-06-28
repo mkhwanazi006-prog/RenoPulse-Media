@@ -12,11 +12,20 @@ document.addEventListener("DOMContentLoaded", () => {
         // [Your existing code for fetching Nominatim addresses goes here]
     }
 
-    // Only runs if the registration form exists
-    if (contractorForm) {
-        // [Your existing EmailJS submit event listener goes here]
-    }
+   // ==========================================================================
+// REGISTRATION SUCCESS ALERT POPUP
+// ==========================================================================
+document.addEventListener("DOMContentLoaded", () => {
+    // Select the form by its class name
+    const contractorForm = document.querySelector(".premium-contractor-form");
 
+    if (contractorForm) {
+        contractorForm.addEventListener("submit", () => {
+            // This triggers right as the browser processes the email submission
+            alert("🎉 Registration Submitted Successfully!\n\nThank you for partnering with RenoPulse Media. Our verification team will review your details and reach out to you shortly.");
+        });
+    }
+});
 
     // ==========================================================================
     // MODULE 2: CONTRACTORS EXCLUSIVE SEARCH ENGINE (contractors.html)
