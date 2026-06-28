@@ -268,16 +268,9 @@
     </div>
     
     <!-- 💡 Updated with Web3Forms Integration -->
-    <form class="premium-contractor-form" action="https://api.web3forms.com/submit" method="POST">
-        
-        <!-- Replace YOUR_ACCESS_KEY_HERE with your key from web3forms.com -->
-        <input type="hidden" name="access_key" value="723df56d-bfb1-4d46-931d-d41f7f1bc73b">
-        <!-- Automatically redirects them back home after submitting -->
-        <input type="hidden" name="redirect" value="https://renopulsemedia.com/index.html">
-        <!-- Customize the subject line you see in your inbox -->
-        <input type="hidden" name="subject" value="New RenoPulse Contractor Registration Alert!">
-
-        <div class="form-row-double">
+  <form action="https://api.web3forms.com/submit" method="POST">
+  <input type="hidden" name="access_key" value="723df56d-bfb1-4d46-931d-d41f7f1bc73b">
+ <div class="form-row-double">
             <div class="form-group">
                 <label>Business Name</label>
                 <input type="text" name="Business_Name" placeholder="e.g. Apex Remodeling" required>
@@ -315,7 +308,11 @@
             <div id="locationSuggestionsBox" class="location-autocomplete-dropdown"></div>
         </div>
         <button type="submit" class="form-submit-btn-gold">SUBMIT APPLICATION &rarr;</button>
-    </form>
+</form>
+        <!-- Automatically redirects them back home after submitting -->
+        <input type="hidden" name="redirect" value="https://renopulsemedia.com/#home">
+        <!-- Customize the subject line you see in your inbox -->
+        <input type="hidden" name="subject" value="New RenoPulse Contractor Registration Alert!">
 </div>
 </section>
 <!-- Add this section directly above your footer bar in index.html -->
