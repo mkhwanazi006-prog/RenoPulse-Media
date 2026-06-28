@@ -52,13 +52,16 @@ section[id] {
     align-items: center;
 }
 
-.logo-image {
-    width: 65px; 
-    height: 65px; 
-    object-fit: contain; 
-    border-radius: 4px; 
-    filter: brightness(1.1) contrast(1.1); 
-    transition: transform 0.3s ease;
+.logo {
+  max-width: 180px;
+  height: auto;
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .logo {
+    max-width: 140px;
+  }
 }
 
 /* Keeps your scale dimensions perfectly intact while dropping center positioning */
