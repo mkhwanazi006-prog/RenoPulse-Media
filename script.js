@@ -167,4 +167,35 @@ document.addEventListener("DOMContentLoaded", () => {
         successMsg.style.display = "block";
     });
 });
+    // ==========================================================================
+// MOBILE HAMBURGER MENU & DRAWER NAVIGATION
+// ==========================================================================
+document.addEventListener("DOMContentLoaded", () => {
+    const hamburger = document.getElementById("hamburgerMenu");
+    const drawer = document.getElementById("servicesDrawer");
+    const closeDrawerBtn = document.getElementById("closeDrawer");
+
+    // Open drawer when clicking the hamburger menu
+    if (hamburger && drawer) {
+        hamburger.addEventListener("click", () => {
+            drawer.classList.add("active");
+        });
+    }
+
+    // Close drawer when clicking the "X" button
+    if (closeDrawerBtn && drawer) {
+        closeDrawerBtn.addEventListener("click", () => {
+            drawer.classList.remove("active");
+        });
+    }
+
+    // Optional: Close drawer if clicking anywhere outside the menu content
+    document.addEventListener("click", (e) => {
+        if (drawer && drawer.classList.contains("active")) {
+            if (!drawer.contains(e.target) && !hamburger.contains(e.target)) {
+                drawer.classList.remove("active");
+            }
+        }
+    });
+});
 }); // Absolute file end closure
