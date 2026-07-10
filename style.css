@@ -1425,3 +1425,183 @@ section[id] {
         text-align: center;
     }
 }
+/* ==========================================================================
+   RENOPULSE ENTERPRISE FOOTER FRAMEWORK STYLES
+   ========================================================================== */
+.renopulse-footer {
+    background-color: #0c0c0c;
+    border-top: 1px solid #1a1a1a;
+    padding: 80px 20px 40px 20px;
+    font-family: inherit;
+}
+
+.footer-directory-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 30px;
+}
+
+.column-title {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #222222;
+    padding-bottom: 8px;
+}
+
+.directory-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.directory-links li {
+    margin-bottom: 12px;
+}
+
+.directory-links a {
+    color: #8e8e93;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s ease;
+    cursor: pointer;
+}
+
+.directory-links a:hover {
+    color: #ffffff;
+}
+
+/* INTERACTIVE DISPLAY DRAWER FOR LINKS */
+.footer-detail-drawer {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #141414;
+    border: 1px solid #222222;
+    border-radius: 6px;
+    padding: 30px;
+    position: relative;
+    margin-top: 40px;
+    display: none; /* Controlled by JavaScript visibility state */
+    animation: fadeInSlide 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+@keyframes fadeInSlide {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.close-detail-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: #8e8e93;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.close-detail-btn:hover {
+    color: #ffffff;
+}
+
+.drawer-inner-content h3 {
+    font-size: 18px;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.drawer-inner-content p {
+    color: #8e8e93;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* DIVIDER LINE */
+.footer-divider {
+    max-width: 1200px;
+    margin: 50px auto 40px auto;
+    border: 0;
+    border-top: 1px solid #1a1a1a;
+}
+
+/* BASE BASEMENT LAYER */
+.footer-bottom-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.footer-contact-block h5, .footer-social-block h5 {
+    color: #ffffff;
+    font-size: 12px;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.footer-contact-block p {
+    font-size: 14px;
+    color: #8e8e93;
+    margin-bottom: 8px;
+}
+
+.footer-contact-block a {
+    color: #8e8e93;
+    text-decoration: none;
+}
+
+.social-links-row {
+    display: flex;
+    gap: 20px;
+}
+
+.social-links-row a {
+    color: #8e8e93;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s ease;
+}
+
+.social-links-row a:hover {
+    color: #ffffff;
+}
+
+.wa-highlight {
+    font-weight: bold;
+}
+
+.footer-copyright-block {
+    width: 100%;
+    text-align: center;
+    color: #444446;
+    font-size: 12px;
+    margin-top: 20px;
+}
+
+/* ==========================================================================
+   MOBILE FOOTER MEDIA QUERY BREAKPOINT (Under 768px Width)
+   ========================================================================== */
+@media screen and (max-width: 768px) {
+    .footer-directory-grid {
+        grid-template-columns: 1fr; /* Stack links on top of each other on mobile phones */
+        gap: 40px;
+    }
+
+    .footer-bottom-wrapper {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .social-links-row {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+}
