@@ -208,3 +208,72 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 });
   
+// ==========================================================================
+// INTERACTIVE FOOTER DETAIL ENGINE
+// ==========================================================================
+document.addEventListener("DOMContentLoaded", () => {
+    const detailDrawer = document.getElementById("footerDetailDrawer");
+    const dynamicContentContainer = document.getElementById("drawerDynamicContent");
+    const closeDrawerBtn = document.getElementById("closeDetailDrawer");
+    
+    // Database containing text descriptions for non-scrolling items
+    const footerDatabase = {
+        "how-it-works": {
+            title: "🔄 How It Works",
+            text: "RenoPulse bridges the gap between top-tier trade contractors and businesses across South Africa. 1) Discover authenticated specialists across various building categories. 2) Review portfolio galleries and check verified credentials. 3) Book your matching engineer directly through active pipeline paths."
+        },
+        "blog-details": {
+            title: "📰 Industry Insights & Trends",
+            text: "Explore the latest renovation guidelines, sustainable product specs, and localized building cost benchmarks across Gauteng. Stay ahead with design strategies curated by our structural partners."
+        },
+        "listing-works": {
+            title: "📋 How Listing Works For Contractors",
+            text: "Verified specialists apply via our contractor terminal. Once our compliance team authenticates your business registration documents, VAT numbers, and portfolio reviews, your digital channel goes active instantly, pairing you with clients in your service areas."
+        },
+        "faq-details": {
+            title: "❓ Frequently Asked Questions",
+            text: "Is verification free? Yes, baseline listing is open to certified businesses. How are leads matched? Leads pass transparently to targeted operators depending on proximity, availability, and specific project scopes."
+        },
+        "reviews-details": {
+            title: "⭐ Customer Reviews",
+            text: "\"RenoPulse eliminated guesswork completely. The bathroom remodel team we picked delivered pristine work within timeline projections.\" — Thabo M., Sandton."
+        },
+        "stories-details": {
+            title: "📈 Contractor Success Stories",
+            text: "Apex Remodeling experienced an 80% spike in consistent commercial interior volumes within 4 months of refining their optimization placement listing under our marketplace structure."
+        },
+        "privacy-details": {
+            title: "🛡️ Privacy Policy",
+            text: "Your data privacy matters. RenoPulse Media securely protects all system credentials and communication archives according to POPIA regulations. We do not distribute lead profiling documents to third parties without explicit authorization blocks."
+        },
+        "terms-details": {
+            title: "⚖️ Terms & Conditions",
+            text: "By utilizing this discovery channel, users confirm strict alignment with professional execution frameworks. All contractor agreements are established directly between clients and independent engineering teams."
+        }
+    };
+
+    // Trigger details inline
+    document.querySelectorAll(".detail-trigger").forEach(button => {
+        button.addEventListener("click", (e) => {
+            e.preventDefault();
+            const contentKey = button.getAttribute("data-target");
+            const dataMatch = footerDatabase[contentKey];
+
+            if (dataMatch && detailDrawer && dynamicContentContainer) {
+                dynamicContentContainer.innerHTML = `
+                    <h3>${dataMatch.title}</h3>
+                    <p>${dataMatch.text}</p>
+                `;
+                detailDrawer.style.display = "block";
+                detailDrawer.scrollIntoView({ behavior: "smooth", block: "nearest" });
+            }
+        });
+    });
+
+    // Close Detail Drawer
+    if (closeDrawerBtn && detailDrawer) {
+        closeDrawerBtn.addEventListener("click", () => {
+            detailDrawer.style.display = "none";
+        });
+    }
+});
