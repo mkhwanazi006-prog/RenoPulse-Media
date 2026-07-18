@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Information Center | RenoPulse Media</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="info-page-body">
+
+    <!-- Navigation Bar (Ensure this matches your index.html header layout) -->
+    <nav class="nav-bar">
+        <a href="index.html" class="logo">RenoPulse Media</a>
+    </nav>
+
+    <!-- Main Content Layout -->
+    <div class="info-container">
+        
+        <!-- Left Sidebar Navigation Controls -->
+        <aside class="info-sidebar">
+            <button class="info-tab-link active" onclick="switchInfoPageTab(event, 'info-faqs')">Frequently Asked Questions</button>
+            <button class="info-tab-link" onclick="switchInfoPageTab(event, 'info-privacy')">Privacy Policy</button>
+            <button class="info-tab-link" onclick="switchInfoPageTab(event, 'info-terms')">Terms & Conditions</button>
+            <hr class="sidebar-divider">
+            <a href="index.html" class="back-home-btn">← Back to Home</a>
+        </aside>
+
+        <!-- Right Content Panels Area -->
+        <main class="info-content-panel">
+            
+            <!-- PANEL A: FAQs -->
+            <section id="info-faqs" class="info-tab-content active-panel">
+                <h2>Frequently Asked Questions</h2>
+                
+                <div class="faq-tabs-container">
+                    <button class="faq-tab-btn active" onclick="switchFaqSubTab(event, 'customer-faqs')">FOR CUSTOMERS</button>
+                    <button class="faq-tab-btn" onclick="switchFaqSubTab(event, 'contractor-faqs')">FOR CONTRACTORS</button>
+                </div>
+
+                <!-- Customer View -->
+                <div id="customer-faqs" class="faq-sub-content active-content">
+                    <div class="faq-item">
+                        <h5 class="faq-question">How do I request a quote?</h5>
+                        <p class="faq-answer">Browse our contractor categories or use the search feature to find professionals that match your project. Select a contractor, click "Request a Quote," and complete the project enquiry form. Your request will then be sent directly to the contractor.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h5 class="faq-question">Is RenoPulse free?</h5>
+                        <p class="faq-answer">Yes. RenoPulse is completely free for homeowners looking to find contractors and request quotations.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h5 class="faq-question">How are contractors verified?</h5>
+                        <p class="faq-answer">We review business information, contact details, relevant documentation, and previous work where applicable to maintain a trusted network.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h5 class="faq-question">Can I compare multiple quotations?</h5>
+                        <p class="faq-answer">Absolutely. We encourage homeowners to request and compare quotations from different contractors to help you make an informed decision.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h5 class="faq-question">How do reviews work?</h5>
+                        <p class="faq-answer">After your project has been completed, you'll have the opportunity to leave an honest review based on workmanship, professionalism, and overall satisfaction.</p>
+                    </div>
+                </div>
+
+                <!-- Contractor View -->
+                <div id="contractor-faqs" class="faq-sub-content">
+                    <div class="faq-item">
+                        <h5 class="faq-question">How do I join RenoPulse?</h5>
+                        <p class="faq-answer">Click on "Join RenoPulse" and complete the contractor registration form with your business details, contact information, services offered, and portfolio.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h5 class="faq-question">How much does it cost?</h5>
+                        <p class="faq-answer">During our launch phase, contractor listings may be offered free of charge. As RenoPulse grows, we plan to introduce affordable subscription packages.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h5 class="faq-question">How do I receive leads?</h5>
+                        <p class="faq-answer">When homeowners submit quote requests within your service area, you'll receive the enquiry directly through your contractor account and registered email.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h5 class="faq-question">How do I become verified?</h5>
+                        <p class="faq-answer">Verification requires completing your profile and submitting business registration details or certifications. Approved profiles receive a Verified badge.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h5 class="faq-question">Can I edit my profile?</h5>
+                        <p class="faq-answer">Yes. Contractors can update services, upload recent project photos, expand service areas, and keep their portfolio current at any time.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- PANEL B: PRIVACY POLICY -->
+            <section id="info-privacy" class="info-tab-content">
+                <h2>Privacy Policy</h2>
+                <p class="policy-text">Your data privacy matters heavily to us. RenoPulse Media securely protects all system credentials, messaging channels, and account details in strict alignment with POPIA compliance frameworks. We do not distribute lead profiling documents to external third parties without explicit authorization blocks.</p>
+                <p class="policy-text">We collect profile metadata explicitly to improve target accuracy between users and field technicians across our regional optimization layers.</p>
+            </section>
+
+            <!-- PANEL C: TERMS & CONDITIONS -->
+            <section id="info-terms" class="info-tab-content">
+                <h2>Terms & Conditions</h2>
+                <p class="policy-text">By utilizing this discovery channel, users confirm complete alignment with professional execution frameworks. All transactional agreements are established directly between clients and independent contractor groups; RenoPulse Media serves purely as a discovery facilitator tool.</p>
+                <p class="policy-text">Contractors are fully responsible for ensuring their industry validation metrics, insurance registrations, and certifications remain completely up to date while listed publicly on our ecosystem panels.</p>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- Interactive Routing Logic -->
+    <script>
+        function switchInfoPageTab(event, targetPanelId) {
+            // Hide all main panels
+            document.querySelectorAll('.info-tab-content').forEach(panel => {
+                panel.classList.remove('active-panel');
+            });
+            // Remove active style from left buttons
+            document.querySelectorAll('.info-tab-link').forEach(button => {
+                button.classList.remove('active');
+            });
+            // Show target panel and highlight button
+            document.getElementById(targetPanelId).classList.add('active-panel');
+            event.currentTarget.classList.add('active');
+        }
+
+        function switchFaqSubTab(event, targetFaqGroup) {
+            // Toggle inner FAQ Customer/Contractor tabs
+            document.querySelectorAll('.faq-sub-content').forEach(content => {
+                content.classList.remove('active-content');
+            });
+            document.querySelectorAll('.faq-tab-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            document.getElementById(targetFaqGroup).classList.add('active-content');
+            event.currentTarget.classList.add('active');
+        }
+
+        // Automatic structural anchor detection
+        window.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const view = urlParams.get('view');
+            if (view) {
+                const targetBtn = document.querySelector(`[onclick*="${view}"]`);
+                if (targetBtn) targetBtn.click();
+            }
+        });
+    </script>
+</body>
+</html>
