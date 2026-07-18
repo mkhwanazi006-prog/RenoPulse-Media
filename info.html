@@ -3,181 +3,142 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RenoPulse Media | Information Hub</title>
+    <title>Information Center | RenoPulse Media</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="info-page-body">
 
-    <!-- Navigation -->
-    <nav class="nav-bar" style="padding: 20px; border-bottom: 1px solid #1a1a1a; display: flex; justify-content: space-between; align-items: center;">
-        <a href="index.html" class="logo" style="color: #ffffff; text-decoration: none; font-weight: bold; font-size: 1.2rem;">RenoPulse Media</a>
-        <a href="index.html" class="back-home-btn" style="color: #8e8e93; text-decoration: none; font-size: 14px;">← Back to Home</a>
+    <!-- Navigation Bar (Ensure this matches your index.html header layout) -->
+    <nav class="nav-bar">
+        <a href="index.html" class="logo">RenoPulse Media</a>
     </nav>
 
-    <!-- Main Dynamic Content Wrapper -->
-    <main class="info-single-container">
-        <div class="info-card-panel" id="dynamicContentBlock">
-            <!-- JavaScript drops the targeted panel here -->
-        </div>
-    </main>
+    <!-- Main Content Layout -->
+    <div class="info-container">
+        
+        <!-- Left Sidebar Navigation Controls -->
+        <aside class="info-sidebar">
+            <button class="info-tab-link active" onclick="switchInfoPageTab(event, 'info-faqs')">Frequently Asked Questions</button>
+            <button class="info-tab-link" onclick="switchInfoPageTab(event, 'info-privacy')">Privacy Policy</button>
+            <button class="info-tab-link" onclick="switchInfoPageTab(event, 'info-terms')">Terms & Conditions</button>
+            <hr class="sidebar-divider">
+            <a href="index.html" class="back-home-btn">← Back to Home</a>
+        </aside>
 
-    <!-- Content Router Engine -->
+        <!-- Right Content Panels Area -->
+        <main class="info-content-panel">
+            
+            <!-- PANEL A: FAQs -->
+            <section id="info-faqs" class="info-tab-content active-panel">
+                <h2>Frequently Asked Questions</h2>
+                
+                <div class="faq-tabs-container">
+                    <button class="faq-tab-btn active" onclick="switchFaqSubTab(event, 'customer-faqs')">FOR CUSTOMERS</button>
+                    <button class="faq-tab-btn" onclick="switchFaqSubTab(event, 'contractor-faqs')">FOR CONTRACTORS</button>
+                </div>
+
+                <!-- Customer View -->
+                <div id="customer-faqs" class="faq-sub-content active-content">
+                    <div class="faq-item">
+                        <h5 class="faq-question">How do I request a quote?</h5>
+                        <p class="faq-answer">Browse our contractor categories or use the search feature to find professionals that match your project. Select a contractor, click "Request a Quote," and complete the project enquiry form. Your request will then be sent directly to the contractor.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h5 class="faq-question">Is RenoPulse free?</h5>
+                        <p class="faq-answer">Yes. RenoPulse is completely free for homeowners looking to find contractors and request quotations.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h5 class="faq-question">How are contractors verified?</h5>
+                        <p class="faq-answer">We review business information, contact details, relevant documentation, and previous work where applicable to maintain a trusted network.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h5 class="faq-question">Can I compare multiple quotations?</h5>
+                        <p class="faq-answer">Absolutely. We encourage homeowners to request and compare quotations from different contractors to help you make an informed decision.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h5 class="faq-question">How do reviews work?</h5>
+                        <p class="faq-answer">After your project has been completed, you'll have the opportunity to leave an honest review based on workmanship, professionalism, and overall satisfaction.</p>
+                    </div>
+                </div>
+
+                <!-- Contractor View -->
+                <div id="contractor-faqs" class="faq-sub-content">
+                    <div class="faq-item">
+                        <h5 class="faq-question">How do I join RenoPulse?</h5>
+                        <p class="faq-answer">Click on "Join RenoPulse" and complete the contractor registration form with your business details, contact information, services offered, and portfolio.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h5 class="faq-question">How much does it cost?</h5>
+                        <p class="faq-answer">During our launch phase, contractor listings may be offered free of charge. As RenoPulse grows, we plan to introduce affordable subscription packages.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h5 class="faq-question">How do I receive leads?</h5>
+                        <p class="faq-answer">When homeowners submit quote requests within your service area, you'll receive the enquiry directly through your contractor account and registered email.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h5 class="faq-question">How do I become verified?</h5>
+                        <p class="faq-answer">Verification requires completing your profile and submitting business registration details or certifications. Approved profiles receive a Verified badge.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h5 class="faq-question">Can I edit my profile?</h5>
+                        <p class="faq-answer">Yes. Contractors can update services, upload recent project photos, expand service areas, and keep their portfolio current at any time.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- PANEL B: PRIVACY POLICY -->
+            <section id="info-privacy" class="info-tab-content">
+                <h2>Privacy Policy</h2>
+                <p class="policy-text">Your data privacy matters heavily to us. RenoPulse Media securely protects all system credentials, messaging channels, and account details in strict alignment with POPIA compliance frameworks. We do not distribute lead profiling documents to external third parties without explicit authorization blocks.</p>
+                <p class="policy-text">We collect profile metadata explicitly to improve target accuracy between users and field technicians across our regional optimization layers.</p>
+            </section>
+
+            <!-- PANEL C: TERMS & CONDITIONS -->
+            <section id="info-terms" class="info-tab-content">
+                <h2>Terms & Conditions</h2>
+                <p class="policy-text">By utilizing this discovery channel, users confirm complete alignment with professional execution frameworks. All transactional agreements are established directly between clients and independent contractor groups; RenoPulse Media serves purely as a discovery facilitator tool.</p>
+                <p class="policy-text">Contractors are fully responsible for ensuring their industry validation metrics, insurance registrations, and certifications remain completely up to date while listed publicly on our ecosystem panels.</p>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- Interactive Routing Logic -->
     <script>
-        const contentDatabase = {
-            "privacy": {
-                title: "Privacy Policy",
-                html: `
-                    <p class="policy-meta-date"><strong>Effective Date:</strong> 14 July 2026</p>
-                    <p class="policy-intro-text">Welcome to RenoPulse Media ("RenoPulse Media", "we", "our", or "us")[cite: 3]. Your privacy is important to us[cite: 3]. This Privacy Policy explains how we collect, use, store, disclose, and protect your personal information when you use our website, services, and online marketplace[cite: 3]. By accessing or using RenoPulse Media, you agree to the collection and use of your information in accordance with this Privacy Policy[cite: 3].</p>
+        function switchInfoPageTab(event, targetPanelId) {
+            // Hide all main panels
+            document.querySelectorAll('.info-tab-content').forEach(panel => {
+                panel.classList.remove('active-panel');
+            });
+            // Remove active style from left buttons
+            document.querySelectorAll('.info-tab-link').forEach(button => {
+                button.classList.remove('active');
+            });
+            // Show target panel and highlight button
+            document.getElementById(targetPanelId).classList.add('active-panel');
+            event.currentTarget.classList.add('active');
+        }
 
-                    <div class="policy-section">
-                        <h4>1. Information We Collect</h4>
-                        <p class="policy-text">We may collect the following information[cite: 3]:</p>
-                        <ul class="policy-list">
-                            <li><strong>Personal Information:</strong> Full name, email address, phone number, physical address (where applicable), company name, business registration details (for contractors), and payment information (where applicable)[cite: 3].</li>
-                            <li><strong>Project Information:</strong> Property location, type of renovation or construction project, budget estimates, preferred project dates, and service requirements[cite: 3].</li>
-                            <li><strong>Technical Information:</strong> IP address, browser type, device information, cookies, and website usage data[cite: 3].</li>
-                        </ul>
-                    </div>
+        function switchFaqSubTab(event, targetFaqGroup) {
+            // Toggle inner FAQ Customer/Contractor tabs
+            document.querySelectorAll('.faq-sub-content').forEach(content => {
+                content.classList.remove('active-content');
+            });
+            document.querySelectorAll('.faq-tab-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            document.getElementById(targetFaqGroup).classList.add('active-content');
+            event.currentTarget.classList.add('active');
+        }
 
-                    <div class="policy-section">
-                        <h4>2. How We Use Your Information</h4>
-                        <p class="policy-text">We use your information to[cite: 3]:</p>
-                        <ul class="policy-list">
-                            <li>Connect homeowners with suitable contractors and facilitate communication between them[cite: 3].</li>
-                            <li>Improve our website, overall platform functionality, and services[cite: 3].</li>
-                            <li>Respond to enquiries, process support requests, and send service updates or important notifications[cite: 3].</li>
-                            <li>Verify contractor information, prevent fraud, and improve platform security[cite: 3].</li>
-                            <li>Comply with our necessary legal obligations[cite: 3].</li>
-                        </ul>
-                    </div>
-
-                    <div class="policy-section">
-                        <h4>3. Sharing of Information</h4>
-                        <p class="policy-text">We may share your information with verified contractors when you request quotations or services, service providers that help us operate our platform, payment processors (where applicable), and government authorities where required by law[cite: 3]. <strong>We do not sell your personal information to third parties[cite: 3].</strong></p>
-                    </div>
-
-                    <div class="policy-section">
-                        <h4>4. Data Security & 5. Cookies</h4>
-                        <p class="policy-text">We take reasonable technical and organisational measures to protect your personal information against unauthorised access, loss, misuse, alteration, or disclosure[cite: 3]. While we strive to protect your information, no online platform can guarantee complete security[cite: 3]. Our website may use cookies to improve user experience, analyse website traffic, and remember your preferences[cite: 3]. You may disable cookies through your browser settings, though some features may not function properly[cite: 3].</p>
-                    </div>
-
-                    <div class="policy-section">
-                        <h4>6. Your Rights Under POPIA</h4>
-                        <p class="policy-text">In accordance with the Protection of Personal Information Act (POPIA), you have the right to[cite: 3]:</p>
-                        <ul class="policy-list">
-                            <li>Access your personal information and request correction of inaccurate data[cite: 3].</li>
-                            <li>Request deletion of your personal information where legally permissible[cite: 3].</li>
-                            <li>Withdraw consent where applicable or object to certain processing activities[cite: 3].</li>
-                            <li>Lodge a complaint directly with the Information Regulator of South Africa[cite: 3].</li>
-                        </ul>
-                    </div>
-
-                    <div class="policy-section">
-                        <h4>7. Contractor Responsibility</h4>
-                        <p class="policy-text">RenoPulse Media acts as a platform connecting homeowners with independent contractors[cite: 3]. Each contractor is responsible for the services they provide and for complying with all applicable laws and regulations[cite: 3]. RenoPulse Media is not responsible for the quality, workmanship, pricing, warranties, or contractual obligations of independent contractors[cite: 3].</p>
-                    </div>
-
-                    <div class="policy-section">
-                        <h4>8. Data Retention & 9. Third-Party Links</h4>
-                        <p class="policy-text">We retain personal information only for as long as necessary to fulfil the purposes outlined in this Privacy Policy or as required by applicable law[cite: 3]. Our website may contain links to third-party websites[cite: 3]. We are not responsible for the privacy practices or content of external websites[cite: 3].</p>
-                    </div>
-
-                    <div class="policy-section">
-                        <h4>10. Changes & 11. Contact Us</h4>
-                        <p class="policy-text">We may update this Privacy Policy from time to time[cite: 3]. Any changes will be published on this page with an updated effective date[cite: 3]. If you have any questions regarding this Privacy Policy or how your personal information is handled, please contact us[cite: 3]:</p>
-                        <p class="policy-text" style="margin-top: 10px; padding-left: 10px; border-left: 2px solid #222222;">
-                            <strong>RenoPulse Media</strong><br>
-                            Email: info@renopulsemedia.com<br>
-                            Website: www.renopulsemedia.com<br>
-                            South Africa[cite: 3]
-                        </p>
-                    </div>
-                `
-            },
-            },
-            "terms": {
-                title: "Terms and Conditions",
-                html: `
-                    <p class="policy-meta-date"><strong>Effective Date:</strong> 14 July 2026</p>
-                    <p class="policy-intro-text">Welcome to RenoPulse Media ("RenoPulse Media", "we", "our", or "us"). These Terms and Conditions govern your access to and use of our website, services, and online marketplace[cite: 2]. By accessing or using RenoPulse Media, you acknowledge that you have read, understood, and agree to be bound by these Terms and Conditions[cite: 2].</p>
-
-                    <div class="policy-section">
-                        <h4>1. About RenoPulse Media</h4>
-                        <p class="policy-text">RenoPulse Media is an online marketplace that connects homeowners with independent contractors operating within the home improvement industry[cite: 2]. Our platform also provides digital marketing, lead generation, and business growth services to contractors[cite: 2]. RenoPulse Media does not perform construction, renovation, repair, or maintenance services[cite: 2].</p>
-                    </div>
-                    <!-- Remaining Terms Sections Stay Intact -->
-                `
-            },
-            "faqs": {
-                title: "Frequently Asked Questions",
-                html: `
-                    <div class="faq-section-wrapper">
-                        <div class="faq-group-block">
-                            <h3 class="faq-group-title">FOR CUSTOMERS</h3>
-                            <div class="faq-card">
-                                <h5 class="faq-question">How do I request a quote?</h5>
-                                <p class="faq-answer">Browse our contractor categories or use the search feature to find professionals that match your project. Select a contractor, click "Request a Quote," and complete the project enquiry form with details such as the type of work, your location, budget (optional), and any photos of the project. Your request will then be sent directly to the contractor, who will contact you with a quotation[cite: 2].</p>
-                            </div>
-                            <!-- Customer Questions Stay Intact -->
-                        </div>
-                    </div>
-                `
-            },
-            "reviews": {
-                title: "Customer Reviews",
-                html: `
-                    <div class="story-section-wrapper">
-                        <p class="policy-intro-text">See how RenoPulse Media helps homeowners effortlessly source trusted professionals for their construction and renovation projects.</p>
-                        
-                        <div class="faq-card">
-                            <h5 class="faq-question">"Eliminated all the guesswork completely"</h5>
-                            <p class="faq-answer" style="font-style: italic; margin-bottom: 10px;">"Finding a reliable team for our home renovation used to be stressful. Through RenoPulse, we requested quotes easily, reviewed portfolios, and found a verified bathroom remodeling team that delivered pristine work right within our budget timeline."</p>
-                            <span style="color: #8e8e93; font-size: 12px; font-weight: bold;">— Thabo M., Sandton</span>
-                        </div>
-
-                        <div class="faq-card">
-                            <h5 class="faq-question">"Transparent and highly professional"</h5>
-                            <p class="faq-answer" style="font-style: italic; margin-bottom: 10px;">"I loved being able to compare multiple quotes without paying a single cent. The contractor verification process gave me real confidence, and the standard of workmanship was outstanding."</p>
-                            <span style="color: #8e8e93; font-size: 12px; font-weight: bold;">— Elena S., Cape Town</span>
-                        </div>
-                    </div>
-                `
-            },
-            "stories": {
-                title: "Success Stories",
-                html: `
-                    <div class="story-section-wrapper">
-                        <p class="policy-intro-text">Discover how trade contractors and home improvement specialists are scaling their client acquisitions through our digital pipeline frameworks.</p>
-                        
-                        <div class="faq-card">
-                            <h5 class="faq-question">Apex Remodeling: 80% Growth Spike</h5>
-                            <p class="faq-answer" style="margin-bottom: 10px;">After restructuring their business placement listing and joining RenoPulse Media, Apex Remodeling saw an immediate 80% surge in consistent commercial interior volumes over a single 4-month operational run. The direct lead distribution pipeline completely streamlined their client onboarding process.</p>
-                            <span style="color: #8e8e93; font-size: 12px; font-weight: bold;">📍 Location: Gauteng Regional Hub</span>
-                        </div>
-
-                        <div class="faq-card">
-                            <h5 class="faq-question">KZN Structural Partners: From Launch Phase to Fully Booked</h5>
-                            <p class="faq-answer" style="margin-bottom: 10px;">"As a growing engineering company, finding steady project leads was hard. Joining the platform paired us directly with high-intent homeowners in our service sectors, keeping our service pipelines active month after month."</p>
-                            <span style="color: #8e8e93; font-size: 12px; font-weight: bold;">📍 Location: Durban & Surrounding Areas</span>
-                        </div>
-                    </div>
-                `
-            }
-        };
-
-        // Router injection logic
+        // Automatic structural anchor detection
         window.addEventListener('DOMContentLoaded', () => {
             const urlParams = new URLSearchParams(window.location.search);
-            const pageKey = urlParams.get('page');
-            const targetBlock = document.getElementById('dynamicContentBlock');
-
-            const activeData = contentDatabase[pageKey] || contentDatabase['faqs'];
-
-            targetBlock.innerHTML = `
-                <h1 class="info-main-title">${activeData.title}</h1>
-                <div class="info-body-content">${activeData.html}</div>
-            `;
+            const view = urlParams.get('view');
+            if (view) {
+                const targetBtn = document.querySelector(`[onclick*="${view}"]`);
+                if (targetBtn) targetBtn.click();
+            }
         });
     </script>
 </body>
