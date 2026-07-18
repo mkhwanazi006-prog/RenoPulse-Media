@@ -1725,7 +1725,100 @@ section[id] {
     .info-sidebar {
         width: 100%;
     }
-    
+    /* ==========================================================================
+   ENHANCED TEXT STRUCTURE FOR DYNAMIC INFO HUB
+   ========================================================================== */
+.info-page-body {
+    background-color: #0c0c0c;
+    color: #ffffff;
+    margin: 0;
+}
+
+.info-single-container {
+    max-width: 780px; 
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.info-card-panel {
+    background-color: #141414;
+    border: 1px solid #222222;
+    border-radius: 8px;
+    padding: 45px;
+}
+
+.info-main-title {
+    font-size: 26px;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 35px;
+    border-bottom: 1px solid #222222;
+    padding-bottom: 15px;
+    letter-spacing: 0.5px;
+}
+
+/* POLICY STRUCTURE STYLES (Privacy & Terms) */
+.policy-section {
+    margin-bottom: 30px;
+}
+
+.policy-section h4 {
+    font-size: 16px;
+    color: #ffffff;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.policy-text {
+    color: #a0a0a5;
+    font-size: 14px;
+    line-height: 1.65;
+    margin: 0;
+}
+
+/* FAQ CARD & CATEGORY STRUCTURE STYLES */
+.faq-group-title {
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    border-left: 3px solid #8e8e93;
+    padding-left: 10px;
+    margin-bottom: 20px;
+    margin-top: 0;
+}
+
+.faq-card {
+    background-color: #1a1a1c;
+    border: 1px solid #2c2c2e;
+    border-radius: 6px;
+    padding: 20px;
+    margin-bottom: 15px;
+}
+
+.faq-question {
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+    margin: 0 0 8px 0;
+}
+
+.faq-answer {
+    color: #8e8e93;
+    font-size: 13.5px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Screen Responsiveness adjustments */
+@media screen and (max-width: 600px) {
+    .info-card-panel {
+        padding: 25px 20px;
+    }
+    .info-main-title {
+        font-size: 22px;
+    }
+}
     .info-content-panel {
         padding: 20px;
     }
