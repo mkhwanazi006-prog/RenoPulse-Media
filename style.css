@@ -314,7 +314,7 @@ section[id] {
     text-align: center;
     padding: 40px;
     overflow: hidden;
-    background: url("picture-background.jpeg") no-repeat center center/cover;
+    background: url("picture background.jpeg") no-repeat center center/cover;
     background-color: #0b0b0b;
 }
 
