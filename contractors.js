@@ -9,7 +9,7 @@ const directoryDatabase = [
        title: "Elite Bathrooms & Spas",
        tag: "Bathroom Remodeling Expert",
        rating: "4.8",
-       img: "pexels-curtis-adams-1694007-36777927.jpg",
+       img: "pexels-curtis-adams-1694007-36777927.jpg" loading="lazy",
        desc: "Transforming standard home bathrooms into luxury wellness suites. Custom wet-rooms, frameless glass showers, floating vanities, and premium modern tiling layouts.",
        phone: "083 999 8888",
        location: "Sandton, Gauteng",
@@ -51,8 +51,8 @@ function initHomepageCarousel() {
                     <p class="business-category">${contractor.tag}</p>
                     <p class="business-summary">${contractor.desc}</p>
                     <div class="business-contact-info">
-                        <span class="contact-row">📞 ${contractor.phone}</span>
-                        <span class="contact-row">📍 ${contractor.location}</span>
+                        <span class="contact-row"> ${contractor.phone}</span>
+                        <span class="contact-row"> ${contractor.location}</span>
                     </div>
                     <a href="profile.html?name=${encodeURIComponent(contractor.name)}" class="link-view-profile">View Profile &rarr;</a>
                 </div>
@@ -128,8 +128,8 @@ function initDirectoryEngine() {
                         <div class="business-category">${contractor.tag}</div>
                         <p class="business-summary">${contractor.desc}</p>
                         <div class="business-contact-info">
-                            <div>📍 Location: ${contractor.location}</div>
-                            <div>📞 Phone: ${contractor.phone}</div>
+                            <div> Location: ${contractor.location}</div>
+                            <div>Phone: ${contractor.phone}</div>
                         </div>
                         <a href="profile.html?name=${encodeURIComponent(contractor.name)}" class="link-view-profile" style="margin-top: 15px; display: inline-block;">
                             View Profile &rarr;
