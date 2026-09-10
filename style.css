@@ -1341,3 +1341,81 @@ section[id] {
         grid-template-columns: 1fr;
     }
 }
+
+/* ==========================================================================
+   HERO BUTTONS FIX
+   ========================================================================== */
+.hero-btn-container {
+    display: flex !important;
+    gap: 20px !important; 
+    justify-content: center !important;
+    align-items: center !important;
+    flex-wrap: wrap !important; 
+    margin-top: 25px !important;
+}
+
+/* Primary Gold Button (Find Contractors) */
+.btn-gold-hero, 
+a.btn-gold-hero,
+button.btn-gold-hero {
+    display: inline-flex !important;       
+    align-items: center !important;        
+    justify-content: center !important;
+    gap: 10px !important;                  
+    background-color: #c29438 !important;
+    color: #000000 !important;
+    border: 2px solid #c29438 !important; 
+    padding: 16px 32px !important;         
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    letter-spacing: 1.5px !important;
+    text-transform: uppercase !important;
+    text-decoration: none !important;
+    border-radius: 4px !important;
+    cursor: pointer !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4) !important;
+    transition: all 0.3s ease !important;
+}
+
+.btn-gold-hero:hover,
+a.btn-gold-hero:hover,
+button.btn-gold-hero:hover {
+    background-color: #dfad46 !important;
+    border-color: #dfad46 !important; 
+    color: #000000 !important;
+    transform: translateY(-3px) !important; 
+    box-shadow: 0 6px 20px rgba(194, 148, 56, 0.4) !important; 
+}
+
+/* Secondary Outlined CTA Button (Join as a Contractor) */
+.btn-outline-hero,
+a.btn-outline-hero,
+button.btn-outline-hero {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 10px !important;
+    background-color: transparent !important;
+    color: #ffffff !important;
+    border: 2px solid #c29438 !important; 
+    padding: 16px 32px !important;
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    letter-spacing: 1.5px !important;
+    text-transform: uppercase !important;
+    text-decoration: none !important;
+    border-radius: 4px !important;
+    cursor: pointer !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4) !important;
+    transition: all 0.3s ease !important;
+}
+
+.btn-outline-hero:hover,
+a.btn-outline-hero:hover,
+button.btn-outline-hero:hover {
+    background-color: #c29438 !important; 
+    color: #000000 !important;
+    border-color: #c29438 !important;
+    transform: translateY(-3px) !important;
+    box-shadow: 0 6px 20px rgba(194, 148, 56, 0.3) !important;
+}
