@@ -38,8 +38,7 @@ section[id] {
     width: 100%;
     transition: top 0.3s cubic-bezier(0.25, 1, 0.5, 1);
 
-    /* THE GRADIENT BLEND EFFECT */
-    /* This makes the header 100% solid for the top 80%, then smoothly fades out to fully transparent at the bottom edge */
+    /* GRADIENT BLEND EFFECT */
     -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0) 100%);
     mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0) 100%);
 }
@@ -53,32 +52,19 @@ section[id] {
 }
 
 .logo {
-  max-width: 180px;
-  height: auto;
-  object-fit: contain;
+    max-width: 180px;
+    height: auto;
+    object-fit: contain;
 }
 
-@media (max-width: 768px) {
-  .logo {
-    max-width: 140px;
-  }
-}
-
-/* Keeps your scale dimensions perfectly intact while dropping center positioning */
 .brand-logo-img {
-    /* Dimensions & Scaling */
     width: 320px !important;        
     height: auto !important;        
     transform: scale(1.15);         
-    
-    /* Positional Reset */
     margin: 0 !important;                  
     display: block !important;
-    
-    /* Blending Engines */
     mix-blend-mode: screen;        
     filter: brightness(1.2) contrast(1.05);
-    
     transition: transform 0.3s ease;
 }
 
@@ -126,166 +112,13 @@ section[id] {
 .nav-item:hover {
     color: #c29438;
 }
-/* ==========================================================================
-   FRESH RESPONSIVE SIDEBAR NAVIGATION STYLES
-   ========================================================================== */
-
-/* Hidden Off-Screen Left configuration by default */
-.slideout-drawer {
-    position: fixed;
-    top: 0;
-    left: -320px;
-    width: 300px;
-    height: 100%;
-    background-color: #111111;
-    border-right: 1px solid #1a1a1a;
-    z-index: 9999;
-    box-shadow: 5px 0 25px rgba(0, 0, 0, 0.6);
-    padding: 40px 30px;
-    box-sizing: border-box;
-    overflow-y: auto;
-    transition: left 0.35s cubic-bezier(0.25, 1, 0.5, 1);
-}
-
-/* 💡 Activated trigger class applied by JavaScript */
-.slideout-drawer.active {
-    left: 0;
-}
-
-.close-drawer-btn {
-    background: none;
-    border: none;
-    color: #c29438;
-    font-size: 32px;
-    cursor: pointer;
-    position: absolute;
-    top: 20px;
-    right: 20px;
-}
-
-.drawer-title {
-    color: #ffffff;
-    font-size: 18px;
-    letter-spacing: 1px;
-    margin-bottom: 30px;
-    border-bottom: 1px solid #222222;
-    padding-bottom: 10px;
-}
-
-.drawer-title:not(:first-child) {
-    margin-top: 35px;
-}
-
-.drawer-menu-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.drawer-menu-list li {
-    margin-bottom: 20px;
-}
-
-.drawer-menu-list a {
-    color: #aaaaaa;
-    text-decoration: none;
-    font-size: 16px;
-    transition: color 0.2s;
-    display: block;
-}
-
-.drawer-menu-list a:hover {
-    color: #c29438;
-}
-
-.drawer-nav-link {
-    font-weight: 600;
-    letter-spacing: 0.5px;
-}
-
-.drawer-cta-btn {
-    display: block;
-    text-align: center;
-    margin-top: 35px;
-    padding: 14px 20px;
-    background-color: #c29438;
-    color: #000000;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 14px;
-    letter-spacing: 0.5px;
-    border-radius: 6px;
-    transition: background 0.2s ease-in-out;
-}
-
-.drawer-cta-btn:hover {
-    background-color: #e0ab43;
-}
-
-/* ==========================================================================
-   MOBILE VIEWPORT BREAKPOINT CONFIGURATION (Under 768px Width)
-   ========================================================================== */
-@media screen and (max-width: 768px) {
-    /* Hide desktop links */
-    .nav-links {
-        display: none !important;
-    }
-
-    /* 💡 Hide Logo on Mobile Screen layout as requested */
-    .logo-area, .brand-logo-img {
-        display: none !important;
-    }
-
-    /* Render Hamburger Toggle visible */
-    .menu-toggle {
-        display: flex !important;
-        flex-direction: column;
-        gap: 5px;
-        cursor: pointer;
-    }
-
-    .menu-toggle span {
-        display: block;
-        width: 25px;
-        height: 3px;
-        background-color: #ffffff;
-        border-radius: 2px;
-    }
-
-    .header-container {
-        justify-content: flex-start; /* Aligns hamburger content elegantly to the left margin */
-        padding: 0 20px;
-    }
-}
-/* ==========================================================================
-   MOBILE VIEWPORT BREAKPOINT CONFIGURATION (Under 768px Width)
-   ========================================================================== */
-@media screen and (max-width: 768px) {
-    
-    /* 💡 NEW: Hides the Our Expertise section entirely on mobile layouts */
-    .expertise-section, #expertise, .our-expertise-container {
-        display: none !important;
-    }
-
-    /* ... Keep your existing mobile rules here ... */
-    .nav-links {
-        display: none !important;
-    }
-
-    .logo-area, .brand-logo-img {
-        display: none !important;
-    }
-
-    .menu-toggle {
-        display: flex !important; 
-    }
-}
 
 .menu-toggle {
     display: none;
     background: none;
     border: none;
     padding: 0;
+    cursor: pointer;
 }
 
 .menu-toggle span {
@@ -297,13 +130,12 @@ section[id] {
     transition: all 0.3s ease;
 }
 
-/* Optional: Slight gold hover accent on the bars */
 .menu-toggle:hover span {
     background-color: #c29438;
 }
 
 /* ==========================================================================
-   4. HERO CONTAINER SECTION (CINEMATIC SINGLE-IMAGE BACKGROUND)
+   4. HERO CONTAINER SECTION
    ========================================================================== */
 .hero-section {
     position: relative;
@@ -375,7 +207,6 @@ section[id] {
     margin-top: 10px;
 }
 
-/* Primary Gold Hero Button Style */
 .btn-gold-hero {
     display: inline-flex;       
     align-items: center;        
@@ -414,7 +245,6 @@ section[id] {
     transform: translateY(0);
 }
 
-/* Secondary Contractor Outline Button */
 .btn-outline-hero {
     display: inline-flex;
     align-items: center;
@@ -494,16 +324,14 @@ section[id] {
     font-weight: 300;
 }
 
-/* Combined Layout Band */
 .about-services-combined {
     background-color: #0b0b0b;
-    padding: 100px 40px;
+    padding: 100px 40px 60px 40px;
     border-bottom: 1px solid #1a1a1a;
     display: flex;
     justify-content: center;
-    padding-bottom: 60px;
     position: relative;
-    z-index: 2; /* Keeps this block layered over adjacent content bands */
+    z-index: 2;
 }
 
 .combined-wrapper {
@@ -730,25 +558,24 @@ section[id] {
     cursor: pointer;
 }
 
-/* CAROUSEL STRUCTURAL WRAPPERS */
 .directory-cards-carousel-wrapper {
     position: relative;
     width: 100%;
-    overflow: hidden; /* Hides cards 4, 5, etc., until scrolled */
+    overflow: hidden;
     padding: 20px 0;
     display: flex;
     align-items: center;
 }
 
 .contractor-cards-container {
-    display: flex; /* Forces cards into a single row instead of vertical list */
+    display: flex;
     gap: 20px; 
     transition: transform 0.4s ease-in-out; 
     width: 100%;
 }
 
 .contractor-showcase-card {
-    flex: 0 0 calc(33.333% - 14px); /* Forces each card to occupy roughly 1/3 of row width */
+    flex: 0 0 calc(33.333% - 14px);
     min-width: 300px; 
     box-sizing: border-box;
     background: #ffffff;
@@ -854,13 +681,10 @@ section[id] {
 }
 
 /* ==========================================================================
-   8. SIDE-BY-SIDE CONTACT & CONTRACTOR REGISTRATION FORM
-   ========================================================================== */
-/* ==========================================================================
-   PREMIUM CONTACT & SOCIAL CONNECT STYLES
+   8. CONTACT & CONTRACTOR REGISTRATION
    ========================================================================== */
 .premium-contact-section {
-    background: #1a1a1a; /* Dark sleek premium brand background */
+    background: #1a1a1a;
     color: #ffffff;
     padding: 60px 40px;
     border-radius: 24px;
@@ -914,16 +738,15 @@ section[id] {
 .social-buttons-wrapper {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 24px;
 }
 
-/* INTERACTIVE SOCIAL CARDS */
 .social-action-card {
     display: flex;
     align-items: center;
     background: #262626;
     border: 1px solid #333333;
-    padding: 15px 20px;
+    padding: 16px 24px;
     border-radius: 12px;
     text-decoration: none;
     color: #ffffff;
@@ -946,7 +769,6 @@ section[id] {
     margin-bottom: 0;
 }
 
-/* Smooth hover physics transformations */
 .social-action-card:hover {
     transform: translateX(5px);
     background: #333333;
@@ -955,31 +777,19 @@ section[id] {
 .insta-brand:hover { border-color: #e1306c; }
 .fb-brand:hover { border-color: #1877f2; }
 .ln-brand:hover { border-color: #0077b5; }
-/* Custom color hover parameters for communication nodes */
 .phone-brand:hover { 
-    border-color: #d4af37; /* Gold brand match on hover */
+    border-color: #d4af37; 
     background: #222222;
 }
-/* TikTok neon boundary color styling rules */
 .tiktok-brand:hover {
-    border-color: #ff0050; /* Signature TikTok Neon Red/Cyan accent marker */
-    background: #19222b;   /* Deep slate-dark background variance */
-}
-/* Generous premium spacing between individual communication button blocks */
-.social-buttons-wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 24px; /* Pushes the blocks further apart horizontally/vertically */
-}
-
-/* Optional: Adds a slightly softer interior padding so the text inside feels perfectly balanced */
-.social-action-card {
-    padding: 16px 24px; /* More breathing room inside the boxes */
+    border-color: #ff0050; 
+    background: #19222b;   
 }
 .whatsapp-brand:hover { 
-    border-color: #25d366; /* Official WhatsApp Green branding boundary */
-    background: #1c2e24; /* Subtle dark green blend */
+    border-color: #25d366; 
+    background: #1c2e24; 
 }
+
 .contractor-join-section {
     background-color: #0b0b0b;
     padding: 100px 20px;
@@ -998,7 +808,6 @@ section[id] {
     align-items: flex-start;
 }
 
-/* Left Contact Info Column Layout */
 .contact-info-column {
     flex: 1;
     color: #ffffff;
@@ -1038,7 +847,7 @@ section[id] {
 
 .info-text-box h4 {
     font-size: 14px;
-    color: #c29438; /* Gold labels */
+    color: #c29438;
     margin: 0 0 4px 0;
     letter-spacing: 0.5px;
     text-transform: uppercase;
@@ -1050,7 +859,6 @@ section[id] {
     margin: 0;
 }
 
-/* Right Premium Input Form Column Layout */
 .contact-form-column {
     flex: 1.2;
     background-color: #111111;
@@ -1213,50 +1021,92 @@ section[id] {
 .slideout-drawer {
     position: fixed;
     top: 0;
-    left: -340px; 
-    width: 320px;
+    left: -320px;
+    width: 300px;
     height: 100%;
     background-color: #111111;
-    border-right: 1px solid #222;
-    padding: 60px 0;
-    z-index: 10000;
-    transition: left 0.35s ease;
+    border-right: 1px solid #1a1a1a;
+    z-index: 9999;
+    box-shadow: 5px 0 25px rgba(0, 0, 0, 0.6);
+    padding: 40px 30px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    transition: left 0.35s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
+.slideout-drawer.active,
 .slideout-drawer.drawer-open {
-    left: 0; 
+    left: 0;
 }
 
 .close-drawer-btn {
-    position: absolute;
-    top: 15px;
-    right: 20px;
     background: none;
     border: none;
-    color: #666;
-    font-size: 26px;
+    color: #c29438;
+    font-size: 32px;
     cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
 }
 
 .drawer-title {
-    font-size: 12px;
-    color: #c29438;
-    letter-spacing: 2px;
-    padding: 0 25px 15px 25px;
-    border-bottom: 1px solid #222;
+    color: #ffffff;
+    font-size: 18px;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #222222;
+    padding-bottom: 10px;
+}
+
+.drawer-title:not(:first-child) {
+    margin-top: 35px;
 }
 
 .drawer-menu-list {
     list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-.drawer-menu-item {
-    display: flex;
-    justify-content: space-between;
-    padding: 18px 25px;
+.drawer-menu-list li {
+    margin-bottom: 20px;
+}
+
+.drawer-menu-list a {
+    color: #aaaaaa;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.2s;
+    display: block;
+}
+
+.drawer-menu-list a:hover {
+    color: #c29438;
+}
+
+.drawer-nav-link {
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.drawer-cta-btn {
+    display: block;
+    text-align: center;
+    margin-top: 35px;
+    padding: 14px 20px;
+    background-color: #c29438;
+    color: #000000;
+    text-decoration: none;
+    font-weight: 700;
     font-size: 14px;
-    border-bottom: 1px solid #161616;
-    cursor: pointer;
+    letter-spacing: 0.5px;
+    border-radius: 6px;
+    transition: background 0.2s ease-in-out;
+}
+
+.drawer-cta-btn:hover {
+    background-color: #e0ab43;
 }
 
 .modal-overlay {
@@ -1267,7 +1117,7 @@ section[id] {
     height: 100%;
     background: rgba(0,0,0,0.85);
     z-index: 10001;
-    opacity: 0;              
+    opacity: 0;             
     pointer-events: none;     
     display: flex;
     justify-content: center;
@@ -1281,59 +1131,7 @@ section[id] {
 }
 
 /* ==========================================================================
-   12. RESPONSIVE MEDIA BREAKPOINTS
-   ========================================================================== */
-@media (max-width: 1024px) {
-    .contractors-directory-layout, 
-    .services-interactive-grid, 
-    .contractor-cards-container, 
-    .metrics-grid-container {
-        grid-template-columns: 1fr;
-    }
-}
-
-@media (max-width: 992px) {
-    .combined-wrapper {
-        flex-direction: column;
-        gap: 50px;
-    }
-    .services-tag-grid {
-        grid-template-columns: 1fr; 
-    }
-}
-
-@media (max-width: 900px) {
-    .contact-split-wrapper {
-        flex-direction: column;
-        gap: 50px;
-    }
-    
-    .contact-form-column {
-        width: 100%;
-        padding: 30px 20px;
-    }
-}
-
-@media (max-width: 768px) {
-    .about-section {
-        padding: 60px 20px;
-    }
-    .about-content .section-main-title-light {
-        font-size: 26px;
-    }
-    .about-paragraph {
-        font-size: 15px;
-    }
-}
-
-@media (max-width: 600px) {
-    .form-row-double {
-        flex-direction: column;
-        gap: 20px;
-    }
-}
-/* ==========================================================================
-   PLATFORM RATING SECTION STYLING
+   12. PLATFORM RATING SECTION
    ========================================================================== */
 .platform-rating-section {
     background-color: #0b0b0b;
@@ -1387,46 +1185,109 @@ section[id] {
 
 .platform-rating-form textarea:focus {
     border-color: #c29438;
-}.clickable-email-link {
-    color: inherit; /* Keeps the text white/grey matching your current layout */
+}
+
+.clickable-email-link {
+    color: inherit;
     text-decoration: none;
     transition: color 0.2s ease;
 }
 
 .clickable-email-link:hover {
-    color: #c29438; /* Turns gold when hovered over so users know it's interactive */
+    color: #c29438;
     text-decoration: underline;
-}/* ==========================================================================
-   RESPONSIVE MEDIA QUERIES FOR HOMEPAGE (style.css)
-   ========================================================================== */
+}
 
-/* 💻 LAPTOPS & TABLETS (Screens under 1024px wide) */
+/* ==========================================================================
+   13. RENOPULSE ENTERPRISE FOOTER
+   ========================================================================== */
+.renopulse-footer {
+    background-color: #0c0c0c;
+    border-top: 1px solid #1a1a1a;
+    padding: 80px 20px 40px 20px;
+}
+
+.footer-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr repeat(3, 1fr);
+    gap: 40px;
+}
+
+.footer-bottom {
+    max-width: 1400px;
+    margin: 40px auto 0 auto;
+    padding-top: 20px;
+    border-top: 1px solid #1a1a1a;
+    text-align: center;
+    font-size: 13px;
+    color: #666666;
+}
+
+/* ==========================================================================
+   14. RESPONSIVE MEDIA QUERIES
+   ========================================================================== */
 @media screen and (max-width: 1024px) {
-    .combined-wrapper, .contact-split-wrapper {
-        flex-direction: column; /* Stack side-by-side elements vertically */
+    .combined-wrapper, 
+    .contact-split-wrapper {
+        flex-direction: column;
         gap: 40px;
         padding: 40px 20px;
     }
     
-    .contact-info-column, .contact-form-column {
-        width: 100%; /* Take up full width on tablets */
+    .contact-info-column, 
+    .contact-form-column {
+        width: 100%;
     }
 
     .hero-main-title {
-        font-size: 48px; /* Slightly shrink hero text */
+        font-size: 48px;
+    }
+
+    .contractors-directory-layout, 
+    .services-interactive-grid, 
+    .contractor-cards-container, 
+    .metrics-grid-container {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
     }
 }
 
-/* 📱 SMARTPHONES (Screens under 768px wide) */
-@media screen and (max-width: 768px) {
-    /* Hide standard desktop horizontal links */
-    .nav-links {
-        display: none; 
+@media screen and (max-width: 992px) {
+    .services-tag-grid {
+        grid-template-columns: 1fr; 
     }
-    
-    /* Make hamburger menu visible on mobile */
+}
+
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none !important; 
+    }
+
+    .logo-area, 
+    .brand-logo-img {
+        display: none !important;
+    }
+
     .menu-toggle {
-        display: flex;
+        display: flex !important;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .header-container {
+        justify-content: flex-start;
+        padding: 0 20px;
+    }
+
+    .expertise-section, 
+    #expertise, 
+    .our-expertise-container {
+        display: none !important;
     }
 
     .hero-section {
@@ -1435,415 +1296,48 @@ section[id] {
     }
 
     .hero-btn-container {
-        flex-direction: column; /* Stack "Find Contractor" and "Join" buttons */
+        flex-direction: column;
         gap: 15px;
         width: 100%;
     }
 
-    .btn-gold-hero, .btn-outline-hero {
-        width: 100%; /* Buttons take up full screen width on mobile */
+    .btn-gold-hero, 
+    .btn-outline-hero {
+        width: 100%;
         justify-content: center;
     }
 
     .services-interactive-grid {
-        grid-template-columns: 1fr; /* Force specialization cards into 1 column */
+        grid-template-columns: 1fr;
         gap: 20px;
     }
 
-    .form-row-double {
-        grid-template-columns: 1fr; /* Forms stack inputs into a single column */
-        gap: 0;
-    }
-
     .metrics-grid-container {
-        grid-template-columns: 1fr; /* Footer features stack vertically */
+        grid-template-columns: 1fr;
         gap: 25px;
         text-align: center;
     }
-}
-/* ==========================================================================
-   RENOPULSE ENTERPRISE FOOTER FRAMEWORK STYLES
-   ========================================================================== */
-.renopulse-footer {
-    background-color: #0c0c0c;
-    border-top: 1px solid #1a1a1a;
-    padding: 80px 20px 40px 20px;
-    font-family: inherit;
-}
 
-.footer-directory-grid {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 30px;
-}
-
-.column-title {
-    color: #ffffff;
-    font-size: 14px;
-    font-weight: 700;
-    letter-spacing: 1.5px;
-    margin-bottom: 20px;
-    border-bottom: 1px solid #222222;
-    padding-bottom: 8px;
-}
-
-.directory-links {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.directory-links li {
-    margin-bottom: 12px;
-}
-
-.directory-links a {
-    color: #8e8e93;
-    text-decoration: none;
-    font-size: 14px;
-    transition: color 0.2s ease;
-    cursor: pointer;
-}
-
-.directory-links a:hover {
-    color: #ffffff;
-}
-
-/* INTERACTIVE DISPLAY DRAWER FOR LINKS */
-.footer-detail-drawer {
-    max-width: 1200px;
-    margin: 0 auto;
-    background-color: #141414;
-    border: 1px solid #222222;
-    border-radius: 6px;
-    padding: 30px;
-    position: relative;
-    margin-top: 40px;
-    display: none; /* Controlled by JavaScript visibility state */
-    animation: fadeInSlide 0.3s cubic-bezier(0.25, 1, 0.5, 1);
-}
-
-@keyframes fadeInSlide {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-.close-detail-btn {
-    position: absolute;
-    top: 15px;
-    right: 20px;
-    background: none;
-    border: none;
-    color: #8e8e93;
-    font-size: 24px;
-    cursor: pointer;
-}
-
-.close-detail-btn:hover {
-    color: #ffffff;
-}
-
-.drawer-inner-content h3 {
-    font-size: 18px;
-    color: #ffffff;
-    margin-bottom: 15px;
-}
-
-.drawer-inner-content p {
-    color: #8e8e93;
-    font-size: 14px;
-    line-height: 1.6;
-}
-
-/* DIVIDER LINE */
-.footer-divider {
-    max-width: 1200px;
-    margin: 50px auto 40px auto;
-    border: 0;
-    border-top: 1px solid #1a1a1a;
-}
-
-/* BASE BASEMENT LAYER */
-.footer-bottom-wrapper {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    gap: 40px;
-}
-
-.footer-contact-block h5, .footer-social-block h5 {
-    color: #ffffff;
-    font-size: 12px;
-    letter-spacing: 1px;
-    margin-bottom: 15px;
-}
-
-.footer-contact-block p {
-    font-size: 14px;
-    color: #8e8e93;
-    margin-bottom: 8px;
-}
-
-.footer-contact-block a {
-    color: #8e8e93;
-    text-decoration: none;
-}
-
-.social-links-row {
-    display: flex;
-    gap: 20px;
-}
-
-.social-links-row a {
-    color: #8e8e93;
-    text-decoration: none;
-    font-size: 14px;
-    transition: color 0.2s ease;
-}
-
-.social-links-row a:hover {
-    color: #ffffff;
-}
-
-.wa-highlight {
-    font-weight: bold;
-}
-
-.footer-copyright-block {
-    width: 100%;
-    text-align: center;
-    color: #444446;
-    font-size: 12px;
-    margin-top: 20px;
-}
-
-/* ==========================================================================
-   MOBILE FOOTER MEDIA QUERY BREAKPOINT (Under 768px Width)
-   ========================================================================== */
-@media screen and (max-width: 768px) {
-    .footer-directory-grid {
-        grid-template-columns: 1fr; /* Stack links on top of each other on mobile phones */
-        gap: 40px;
+    .about-section {
+        padding: 60px 20px;
     }
 
-    .footer-bottom-wrapper {
+    .about-content .section-main-title-light {
+        font-size: 26px;
+    }
+
+    .about-paragraph {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .form-row-double {
         flex-direction: column;
-        align-items: flex-start;
+        gap: 20px;
     }
 
-    .social-links-row {
-        flex-wrap: wrap;
-        gap: 15px;
-    }
-}
-/* ==========================================================================
-   INFO / FAQ / PRIVACY / TERMS PAGE (info.html) — was previously unstyled
-   ========================================================================== */
-.info-page-body {
-    background-color: #0b0b0b;
-    color: #ffffff;
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-}
-
-.nav-bar {
-    background-color: #111111;
-    padding: 20px 40px;
-    border-bottom: 1px solid #1a1a1a;
-}
-
-.nav-bar .logo {
-    font-size: 22px;
-    font-weight: 700;
-    color: #ffffff;
-    text-decoration: none;
-}
-
-.info-container {
-    max-width: 1100px;
-    margin: 50px auto;
-    padding: 0 20px;
-    display: flex;
-    gap: 40px;
-    align-items: flex-start;
-}
-
-.info-sidebar {
-    flex: 0 0 240px;
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-    position: sticky;
-    top: 30px;
-}
-
-.info-tab-link {
-    background: none;
-    border: none;
-    text-align: left;
-    color: #aaaaaa;
-    font-size: 15px;
-    font-weight: 600;
-    padding: 12px 16px;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background 0.2s ease, color 0.2s ease;
-}
-
-.info-tab-link:hover {
-    color: #ffffff;
-    background-color: #161616;
-}
-
-.info-tab-link.active {
-    color: #c29438;
-    background-color: #161616;
-}
-
-.sidebar-divider {
-    border: none;
-    border-top: 1px solid #1a1a1a;
-    margin: 16px 0;
-}
-
-.back-home-btn {
-    color: #c29438;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 14px;
-    padding: 12px 16px;
-}
-
-.back-home-btn:hover {
-    text-decoration: underline;
-}
-
-.info-content-panel {
-    flex: 1;
-    background-color: #111111;
-    border: 1px solid #1a1a1a;
-    border-radius: 12px;
-    padding: 40px;
-    min-width: 0;
-}
-
-.info-tab-content {
-    display: none;
-}
-
-.info-tab-content.active-panel {
-    display: block;
-}
-
-.info-tab-content h2 {
-    margin: 0 0 25px 0;
-    font-size: 30px;
-    color: #ffffff;
-}
-
-.policy-text {
-    color: #aaaaaa;
-    font-size: 15px;
-    line-height: 1.8;
-    margin-bottom: 20px;
-}
-
-/* FAQ inner tabs */
-.faq-tabs-container {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 30px;
-    border-bottom: 1px solid #1a1a1a;
-}
-
-.faq-tab-btn {
-    background: none;
-    border: none;
-    color: #aaaaaa;
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    padding: 12px 4px;
-    margin-right: 20px;
-    cursor: pointer;
-    position: relative;
-}
-
-.faq-tab-btn::after {
-    content: '';
-    position: absolute;
-    bottom: -1px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: #c29438;
-    transition: width 0.3s ease;
-}
-
-.faq-tab-btn:hover {
-    color: #ffffff;
-}
-
-.faq-tab-btn.active {
-    color: #c29438;
-}
-
-.faq-tab-btn.active::after {
-    width: 100%;
-}
-
-.faq-sub-content {
-    display: none;
-}
-
-.faq-sub-content.active-content {
-    display: block;
-}
-
-.faq-item {
-    padding: 18px 0;
-    border-bottom: 1px solid #1a1a1a;
-}
-
-.faq-item:last-child {
-    border-bottom: none;
-}
-
-.faq-question {
-    margin: 0 0 8px 0;
-    color: #ffffff;
-    font-size: 16px;
-}
-
-.faq-answer {
-    margin: 0;
-    color: #aaaaaa;
-    font-size: 14px;
-    line-height: 1.7;
-}
-
-@media screen and (max-width: 768px) {
-    .info-container {
-        flex-direction: column;
-        margin: 30px auto;
-    }
-
-    .info-sidebar {
-        flex-direction: row;
-        flex-wrap: wrap;
-        position: static;
-        width: 100%;
-    }
-
-    .info-content-panel {
-        padding: 25px;
-    }
-
-    .back-home-btn {
-        width: 100%;
+    .footer-container {
+        grid-template-columns: 1fr;
     }
 }
