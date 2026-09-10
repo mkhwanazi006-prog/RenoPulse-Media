@@ -14,24 +14,8 @@
 </head>
 <body>
 
-<!-- ==========================================================================
-     SECTION 1: SLIDEOUT INTERACTIVE DRAWER MENU
-     ========================================================================== -->
-<!-- ==========================================================================
-     SECTION 2: GLOBAL NAVIGATION HEADER
-     ========================================================================== -->
-<header class="main-header">
-    <div class="header-container">
-        
-        <div class="logo-area">
-            <img src="logo.jpeg" alt="RenoPulse Media Logo" class="brand-logo-img">
-        </div>
-        <nav class="nav-links">
-            <a href="#home" class="nav-item active">HOME</a>
-            <a href="#aboutUs" class="nav-item">ABOUT US</a>
-            <a href="#contractors" class="nav-item">TRUSTED CONTRACTORS</a> 
-            <a href="#contactUs" class="nav-item">CONTACT US</a>
-            <div class="slideout-drawer" id="servicesDrawer">
+<!-- Slideout Interactive Drawer Menu -->
+<div class="slideout-drawer" id="servicesDrawer">
     <button class="close-drawer-btn" id="closeDrawer">&times;</button>
     <h3 class="drawer-title">OUR SERVICES</h3>
     <ul class="drawer-menu-list">
@@ -43,21 +27,32 @@
         <li><a href="contractors.html?category=landscaping">Landscaping & Garden Design</a></li>
     </ul>
 </div>
+
+<!-- Global Navigation Header -->
+<header class="main-header">
+    <div class="header-container">
+        <div class="logo-area">
+            <a href="#home"><img src="logo.jpeg" alt="RenoPulse Media Logo" class="brand-logo-img"></a>
+        </div>
+        <nav class="nav-links">
+            <a href="#home" class="nav-item active">HOME</a>
+            <a href="#aboutUs" class="nav-item">ABOUT US</a>
+            <a href="#planningSection" class="nav-item">SERVICES</a>
+            <a href="#contractors" class="nav-item">TRUSTED CONTRACTORS</a> 
+            <a href="#contactUs" class="nav-item">CONTACT US</a>
+            <a href="#registration-section" class="nav-cta-btn">JOIN AS CONTRACTOR</a>
         </nav>
     </div>
 </header>
 
-<!-- ==========================================================================
-     SECTION 3: CINEMATIC HERO SECTION
-     ========================================================================== -->
+<!-- Hero Section -->
 <section class="hero-section" id="home">
     <div class="hero-overlay"></div>
     <div class="hero-content">
-        <p class="hero-welcome">WELCOME TO</p>
-        <h1 class="hero-main-title">Reno<span class="gold-text">Pulse</span> Media</h1>
-        <p class="hero-tagline">Connecting Your Next Craft To Your Next Opportunity.</p>
+        <p class="hero-welcome">WELCOME TO RENOPULSE MEDIA</p>
+        <h1 class="hero-main-title">Find Vetted Home Improvement Contractors in <span class="gold-text">South Africa</span></h1>
         <p class="hero-description">
-            We connect homeowners like you to reliable, qualified contractors for your home improvement projects – making it simple, safe and stress-free.
+            We connect homeowners to reliable, qualified contractors for home improvement projects – making your renovation simple, safe, and stress-free.
         </p>
         <div class="hero-btn-container">
             <a href="#planningSection" class="btn-gold-hero-link" style="text-decoration: none;">
@@ -84,9 +79,7 @@
     </div>
 </section>
 
-<!-- ==========================================================================
-     SECTION 4: ABOUT US & BRAND EXPERTISE
-     ========================================================================== -->
+<!-- About Us & Brand Expertise -->
 <section class="about-services-combined" id="aboutUs">
     <div class="combined-wrapper">
         <div class="combined-left-brand">
@@ -104,16 +97,14 @@
                 <div class="service-tag-item">Bathroom Remodeling</div>
                 <div class="service-tag-item">Solar Panel Installation</div>
                 <div class="service-tag-item">Pool Construction & Remodeling</div>
-                <div class="service-tag-item">Windows & Doors Installation</div>
+                <div class="service-tag-item">Roofing & Waterproofing</div>
                 <div class="service-tag-item">Landscaping & Garden Design</div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- ==========================================================================
-     SECTION 5: INTERACTIVE SPECIALIZATION ROUTING GRID
-     ========================================================================== -->
+<!-- Interactive Specialization Grid -->
 <section class="planning-section" id="planningSection">
     <div class="section-header-centered">
         <p class="section-subtitle-gold">WHAT ARE YOU PLANNING?</p>
@@ -172,9 +163,9 @@
         </a>
 
         <a href="contractors.html?category=landscaping" style="text-decoration: none; color: inherit; display: block;">
-            <div class="service-grid-card" data-category="landscaping" loading="lazy">
+            <div class="service-grid-card" data-category="landscaping">
                 <div class="card-image-wrapper">
-                    <img src="pexels-pamanjoe-32427440.jpg" alt="Landscaping">
+                    <img src="pexels-pamanjoe-32427440.jpg" alt="Landscaping" loading="lazy">
                 </div>
                 <h3>Landscaping & Garden Design</h3>
                 <p>Transform your outdoor spaces with custom hardscaping, automated irrigation, and pristine lawns.</p>
@@ -183,9 +174,7 @@
     </div>
 </section>
 
-<!-- ==========================================================================
-     SECTION 6: AUTOMATED FEATURED CAROUSEL LISTINGS
-     ========================================================================== -->
+<!-- Featured Contractors Carousel -->
 <section class="featured-contractors-section" id="contractors">
     <div class="section-header-centered">
         <p class="section-subtitle-gold">FEATURED CONTRACTORS</p>
@@ -198,9 +187,7 @@
     </div>
 </section>
 
-<!-- ==========================================================================
-     SECTION 7: PREMIUM CONNECT & PARTNER REGISTRATION FORM
-     ========================================================================== -->
+<!-- Connect & Partner Registration Form -->
 <section class="contractor-join-section" id="contactUs">
     <div class="form-section-container">
         <div class="contact-split-wrapper">
@@ -210,10 +197,10 @@
                 <p class="contact-p-text">Have questions about our verified network or want to register as an elite contractor?</p>
                 
                 <div class="contact-details-list" style="margin-bottom: 30px;">
-                   <div class="detail-item">
-                      <a href="mailto:info@renopulsemedia.com" class="clickable-email-link">info@renopulsemedia.com</a>
-                   </div>
-                   <div class="detail-item"> Johannesburg, Gauteng</div>
+                    <div class="detail-item">
+                       <a href="mailto:info@renopulsemedia.com" class="clickable-email-link">info@renopulsemedia.com</a>
+                    </div>
+                    <div class="detail-item"> Johannesburg, Gauteng</div>
                 </div>
 
                 <div class="social-buttons-wrapper">
@@ -244,59 +231,72 @@
                 </div>
             </div>
 
-   <!-- ==========================================================================
-     SECTION 7: PREMIUM CONNECT & PARTNER REGISTRATION FORM (UPDATED)
-     ========================================================================== -->
-<div class="contact-form-column" id="registration-section">
-    <div class="form-header-internal">
-        <p class="section-subtitle-gold">PARTNER WITH US</p>
-        <h3 class="form-mini-title">Grow Your Business</h3>
+            <div class="contact-form-column" id="registration-section">
+                <div class="form-header-internal">
+                    <p class="section-subtitle-gold">PARTNER WITH US</p>
+                    <h3 class="form-mini-title">Grow Your Business</h3>
+                </div>
+                <form action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="723df56d-bfb1-4d46-931d-d41f7f1bc73b">
+                    <input type="hidden" name="redirect" value="https://renopulsemedia.com/#home">
+                    <input type="hidden" name="subject" value="New RenoPulse Contractor Registration Alert!">
+                    
+                    <div class="form-row-double">
+                        <div class="form-group">
+                            <label>Business Name</label>
+                            <input type="text" name="Business_Name" placeholder="e.g. Apex Remodeling" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Contact Person</label>
+                            <input type="text" name="Contact_Person" placeholder="Your Full Name" required>
+                        </div>
+                    </div>
+                    <div class="form-row-double">
+                        <div class="form-group">
+                            <label>Email Address</label>
+                            <input type="email" name="Contractor_Email" placeholder="name@company.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Phone Number</label>
+                            <input type="tel" name="Contractor_Phone" placeholder="e.g. 083 456 7890" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Primary Specialization</label>
+                        <select name="Specialization" required>
+                            <option value="" disabled selected>Select trade...</option>
+                            <option value="kitchen">Kitchen Remodeling</option>
+                            <option value="bathroom">Bathroom Remodeling</option>
+                            <option value="solar">Solar Panel Installation</option>
+                            <option value="roofing">Roofing</option>
+                            <option value="landscaping">Landscaping & Garden Design</option>
+                            <option value="pools">Pool Construction & Remodeling</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Service Area / Location</label>
+                        <input type="text" id="globalLocationInput" name="Location" placeholder="Type city or province..." required>
+                        <div id="locationSuggestionsBox" class="location-autocomplete-dropdown"></div>
+                    </div>
+
+                    <!-- Vetting Checkboxes -->
+                    <div class="form-group-checkboxes" style="margin: 15px 0 20px 0;">
+                        <label style="display: flex; align-items: center; gap: 8px; color: #ccc; font-size: 0.9rem; margin-bottom: 8px;">
+                            <input type="checkbox" name="CIPC_Registered" value="Yes"> CIPC Registered Enterprise
+                        </label>
+                        <label style="display: flex; align-items: center; gap: 8px; color: #ccc; font-size: 0.9rem;">
+                            <input type="checkbox" name="Public_Liability" value="Yes"> Active Public Liability Insurance
+                        </label>
+                    </div>
+
+                    <button type="submit" class="form-submit-btn-gold">SUBMIT APPLICATION &rarr;</button>
+                </form>
+            </div>
+        </div>
     </div>
-  <form action="https://api.web3forms.com/submit" method="POST">
-  <input type="hidden" name="access_key" value="723df56d-bfb1-4d46-931d-d41f7f1bc73b">
- <div class="form-row-double">
-            <div class="form-group">
-                <label>Business Name</label>
-                <input type="text" name="Business_Name" placeholder="e.g. Apex Remodeling" required>
-            </div>
-            <div class="form-group">
-                <label>Contact Person</label>
-                <input type="text" name="Contact_Person" placeholder="Your Full Name" required>
-            </div>
-        </div>
-        <div class="form-row-double">
-            <div class="form-group">
-                <label>Email Address</label>
-                <input type="email" name="Contractor_Email" placeholder="name@company.com" required>
-            </div>
-            <div class="form-group">
-                <label>Phone Number</label>
-                <input type="tel" name="Contractor_Phone" placeholder="e.g. 083 456 7890" required>
-            </div>
-        </div>
-        <div class="form-group">
-            <label>Primary Specialization</label>
-            <select name="Specialization" required>
-                <option value="" disabled selected>Select trade...</option>
-                <option value="kitchen">Kitchen Remodeling</option>
-                <option value="bathroom">Bathroom Remodeling</option>
-                <option value="solar">Solar Panel Installation</option>
-                <option value="roofing">Roofing</option>
-                <option value="landscaping">Landscaping & Garden Design</option>
-                <option value="pools">Pool Construction & Remodeling</option>
-            </select>
-        </div>
-        <div class="form-group">
-            <label>Service Area / Location</label>
-            <input type="text" id="globalLocationInput" name="Location" placeholder="Type city or province..." required>
-            <div id="locationSuggestionsBox" class="location-autocomplete-dropdown"></div>
-        </div>
-        <button type="submit" class="form-submit-btn-gold">SUBMIT APPLICATION &rarr;</button>
-</form>
-        <input type="hidden" name="redirect" value="https://renopulsemedia.com/#home">
-        <input type="hidden" name="subject" value="New RenoPulse Contractor Registration Alert!">
-</div>
 </section>
+
+<!-- Feedback Section -->
 <section class="platform-rating-section" id="platformRating">
     <div class="form-section-container">
         <div class="rating-box-centered">
@@ -325,25 +325,20 @@
         </div>
     </div>
 </section>
-<!-- ==========================================================================
-     SECTION 8: METRICS FOOTER BAR
-     ========================================================================== -->
-    <br>
-    <footer class="renopulse-footer">
+
+<!-- Footer -->
+<footer class="renopulse-footer">
     <div class="footer-directory-grid">
-        
-        <!-- Category 1: Services -->
         <div class="directory-column">
             <h4 class="column-title">SERVICES</h4>
             <ul class="directory-links">
                 <li><a href="index.html#contractors">Find a Contractor</a></li>
                 <li><a href="info.html?view=info-faqs">How It Works</a></li>
-                <li><a href="index.html#servicesDrawer">Our Services</a></li>
+                <li><a href="index.html#planningSection">Our Services</a></li>
                 <li><a href="info.html?view=info-faqs">Blog</a></li>
             </ul>
         </div>
 
-        <!-- Category 2: Contractors -->
         <div class="directory-column">
             <h4 class="column-title">FOR CONTRACTORS</h4>
             <ul class="directory-links">
@@ -352,7 +347,6 @@
             </ul>
         </div>
 
-        <!-- Category 3: Company -->
         <div class="directory-column">
             <h4 class="column-title">COMPANY</h4>
             <ul class="directory-links">
@@ -361,7 +355,6 @@
             </ul>
         </div>
 
-       <!-- Category 4: Resources -->
         <div class="directory-column">
             <h4 class="column-title">RESOURCES</h4>
             <ul class="directory-links">
@@ -370,8 +363,7 @@
                 <li><a href="info.html?page=stories">Success Stories</a></li>
             </ul>
         </div>
-      
-        <!-- Category 5: Legal -->
+
         <div class="directory-column">
             <h4 class="column-title">LEGAL</h4>
             <ul class="directory-links">
@@ -379,12 +371,10 @@
                 <li><a href="info.html?page=terms">Terms & Conditions</a></li>
             </ul>
         </div>
-
     </div>
 
     <hr class="footer-divider">
 
-    <!-- Bottom Contact and Social Basement Blocks Remain Identical -->
     <div class="footer-bottom-wrapper">
         <div class="footer-contact-block">
             <h5>REACH OUT</h5>
@@ -405,6 +395,7 @@
         </div>
     </div>
 </footer>
+
 <script src="contractors.js"></script>
 </body>
 </html>
